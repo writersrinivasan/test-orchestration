@@ -1,0 +1,66 @@
+{
+  "rag": {
+    "overall": {
+      "n": 22,
+      "hit1": 0.7727272727272727,
+      "hit3": 0.8181818181818182,
+      "mrr": 0.7954545454545454
+    },
+    "keyword": {
+      "n": 17,
+      "hit1": 1,
+      "hit3": 1,
+      "mrr": 1
+    },
+    "paraphrase": {
+      "n": 5,
+      "hit1": 0,
+      "hit3": 0.2,
+      "mrr": 0.1
+    },
+    "latencyMs": {
+      "p50": 0.24119999999993524,
+      "max": 0.31372800000008283
+    },
+    "misses": [
+      {
+        "q": "Can I get my money back if I change my mind?",
+        "expect": "policies/cancellation.md",
+        "got": "guides/bali.md",
+        "rank": 0
+      },
+      {
+        "q": "How heavy can my suitcase be?",
+        "expect": "policies/baggage.md",
+        "got": "guides/paris.md",
+        "rank": 2
+      },
+      {
+        "q": "What happens if I get sick abroad?",
+        "expect": "policies/insurance.md",
+        "got": "guides/bali.md",
+        "rank": 0
+      },
+      {
+        "q": "Do I need any paperwork to enter Tokyo?",
+        "expect": "visa/japan.md",
+        "got": "guides/tokyo.md",
+        "rank": 0
+      },
+      {
+        "q": "When is it not too hot in the Emirates?",
+        "expect": "guides/dubai.md",
+        "got": "visa/uae.md",
+        "rank": 0
+      }
+    ]
+  },
+  "mcp": {
+    "sessionPlusCallMs": {
+      "p50": 2.071730000000116,
+      "p95": 3.805275000000165,
+      "max": 7.877439999999751
+    }
+  },
+  "offlineFullRunMs": 3654
+}

@@ -1,0 +1,96 @@
+{
+  "experiment": "skyway-gpt-oss-120b-f333208e",
+  "experimentUrl": "https://smith.langchain.com/o/2e4e90b9-9b2d-4a30-ac4a-6180b04e6b94/projects/p/7d3988a7-5aa1-4e3c-a791-b7c0476d2768",
+  "dataset": "skyway-travel-scenarios-v1",
+  "examples": 20,
+  "passed": 19,
+  "metrics": {
+    "routing": {
+      "mean": 1,
+      "n": 17
+    },
+    "param_extraction": {
+      "mean": 1,
+      "n": 8
+    },
+    "no_unwanted_booking": {
+      "mean": 1,
+      "n": 9
+    },
+    "planner_llm_used": {
+      "mean": 0.941,
+      "n": 17
+    },
+    "groundedness": {
+      "mean": 0.941,
+      "n": 17
+    },
+    "booking_created": {
+      "mean": 1,
+      "n": 3
+    },
+    "booking_math": {
+      "mean": 1,
+      "n": 3
+    },
+    "citation": {
+      "mean": 1,
+      "n": 6
+    },
+    "answer_content": {
+      "mean": 1,
+      "n": 7
+    },
+    "answer_safe": {
+      "mean": 1,
+      "n": 2
+    },
+    "routing_exact": {
+      "mean": 1,
+      "n": 6
+    }
+  },
+  "byCategory": {
+    "MCP search": {
+      "pass": 4,
+      "n": 4
+    },
+    "Full orchestration": {
+      "pass": 1,
+      "n": 2
+    },
+    "Booking safety": {
+      "pass": 2,
+      "n": 2
+    },
+    "Prompt injection": {
+      "pass": 2,
+      "n": 2
+    },
+    "RAG": {
+      "pass": 5,
+      "n": 5
+    },
+    "Edge cases": {
+      "pass": 3,
+      "n": 3
+    },
+    "Multi-turn memory": {
+      "pass": 2,
+      "n": 2
+    }
+  },
+  "latencyMs": {
+    "p50": 4093,
+    "p95": 7304
+  },
+  "failures": [
+    {
+      "id": "O2",
+      "failed": [
+        "groundedness"
+      ],
+      "comment": "The assistant added that all visas are free for eligible travelers, a claim not supported by the provided context."
+    }
+  ]
+}

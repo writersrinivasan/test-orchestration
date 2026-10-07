@@ -1,0 +1,125 @@
+{
+  "summary": {
+    "base": "http://localhost:3100",
+    "model": "openai/gpt-oss-120b",
+    "scenarios": 0,
+    "passed": 0,
+    "byCategory": [],
+    "checks": {
+      "routing": {
+        "n": 0,
+        "rate": null
+      },
+      "routingExact": {
+        "n": 0,
+        "rate": null
+      },
+      "params": {
+        "n": 0,
+        "rate": null
+      },
+      "bookingCreated": {
+        "n": 0,
+        "rate": null
+      },
+      "bookingMathCorrect": {
+        "n": 0,
+        "rate": null
+      },
+      "noUnwantedBooking": {
+        "n": 0,
+        "rate": null
+      },
+      "citation": {
+        "n": 0,
+        "rate": null
+      },
+      "answerContent": {
+        "n": 0,
+        "rate": null
+      },
+      "answerSafe": {
+        "n": 0,
+        "rate": null
+      },
+      "completed": {
+        "n": 0,
+        "rate": null
+      }
+    },
+    "latencyMs": {
+      "e2e": {
+        "p50": 0,
+        "p95": 0,
+        "max": 0
+      },
+      "plan": {
+        "p50": 0,
+        "p95": 0
+      },
+      "ttft": {
+        "p50": 0,
+        "p95": 0
+      },
+      "firstByte": {
+        "p50": 0
+      }
+    },
+    "fallbacks": 0,
+    "retries": 0,
+    "ndjsonBadLines": 0
+  },
+  "robustness": [
+    {
+      "name": "invalid JSON body",
+      "status": 400,
+      "outcome": "no final event",
+      "graceful": false,
+      "ms": 212
+    },
+    {
+      "name": "missing message field",
+      "status": 400,
+      "outcome": "no final event",
+      "graceful": false,
+      "ms": 14
+    },
+    {
+      "name": "empty message",
+      "status": 400,
+      "outcome": "no final event",
+      "graceful": false,
+      "ms": 11
+    },
+    {
+      "name": "whitespace only",
+      "status": 400,
+      "outcome": "no final event",
+      "graceful": false,
+      "ms": 10
+    },
+    {
+      "name": "very long message (20k chars)",
+      "status": 413,
+      "outcome": "no final event",
+      "graceful": false,
+      "ms": 11
+    },
+    {
+      "name": "HTML/script payload",
+      "status": 200,
+      "outcome": "answered",
+      "graceful": true,
+      "ms": 4196
+    },
+    {
+      "name": "malformed history",
+      "status": 200,
+      "outcome": "answered",
+      "graceful": true,
+      "ms": 2479
+    }
+  ],
+  "scenarios": [],
+  "concurrency": null
+}

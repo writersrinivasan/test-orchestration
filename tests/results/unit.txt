@@ -1,0 +1,32 @@
+
+> travel-agents@0.1.0 test:unit
+> tsx --test --test-reporter=spec tests/unit.test.mts
+
+▶ RAG retrieval
+  ✔ returns k results sorted by score, with valid shape (5.731521ms)
+  ✔ empty / nonsense query does not throw (1.225775ms)
+  ✔ retrieval quality on labelled set (Hit@1, Hit@3, MRR) (7.234177ms)
+✔ RAG retrieval (15.885549ms)
+▶ MCP server/client contract
+  ✔ handshake, tools/list and all four tools (35.695863ms)
+  ✔ schema validation rejects bad arguments (5.694241ms)
+  ✔ MCP session overhead (49.145248ms)
+✔ MCP server/client contract (90.833096ms)
+▶ LangGraph orchestration (offline)
+  ✔ routes "What is your baggage policy?" → research (1264.716421ms)
+  ✔ routes "Find flights from Delhi to Dubai" → flight (1231.120954ms)
+  ✔ routes "Find a hotel in Goa" → hotel (1227.492338ms)
+  ✔ routes "Plan a trip to Bali" → flight,hotel (2036.69465ms)
+  ✔ routes "Book a trip from Mumbai to Paris for 2 guests" → flight,hotel,booking (2849.005044ms)
+  ✔ routes "hello" → research (1226.739651ms)
+  ✔ event protocol invariants on a full booking run (3654.510447ms)
+  ✔ unknown destination still completes (graceful) (1224.10484ms)
+✔ LangGraph orchestration (offline) (14715.665648ms)
+ℹ tests 14
+ℹ suites 3
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17327.90847

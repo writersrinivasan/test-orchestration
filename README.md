@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SkyWay Agentic Travel
 
-## Getting Started
+A Next.js travel booking assistant built with **LangGraph** multi-agent orchestration, a real **MCP** server and client, a **RAG** knowledge base, and **Groq** as the LLM. As each question is answered, the UI shows the agent workflow, the MCP traffic and the RAG retrieval live.
 
-First, run the development server:
+## Run
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cp .env.example .env.local   # then paste your key: GROQ_API_KEY=gsk_...
+npm install
+npm run dev                  # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Without a key, the app runs in **demo mode**: it routes by keyword and answers from a template, so the graph, MCP and RAG panels still work.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Architecture
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+Customer ─► Supervisor (Groq: intent + plan + params)
+               │  hub & spoke: each specialist hands control back to the supervisor
+               ├─► Research Agent ──► Vector Store   (RAG: TF-IDF embeddings + cosine top-k)
+               ├─► Flight Agent  ──┐
+               ├─► Hotel Agent   ──┼─► MCP Server "travel-tools" (JSON-RPC 2.0)
+               ├─► Booking Agent ──┘   search_flights · search_hotels · get_weather · create_booking
+               └─► Responder (Groq, streams tokens, cites RAG sources) ─► Customer
+```
 
-## Learn More
+| File | What it shows |
+| --- | --- |
+| `src/lib/graph.ts` | LangGraph `StateGraph`: shared state, supervisor routing, conditional edges |
+| `src/lib/mcp.ts` | MCP server and client using `@modelcontextprotocol/sdk` over an in-memory transport; every JSON-RPC message is mirrored to the UI |
+| `src/lib/rag.ts` | Documents → chunks → embeddings → cosine search |
+| `src/app/api/chat/route.ts` | Streams NDJSON events (node status, handoffs, MCP wire, RAG hits, tokens) |
+| `src/app/page.tsx`, `src/components/AgentGraph.tsx` | Chat, live React Flow graph, MCP/RAG/agent message panels |
 
-To learn more about Next.js, take a look at the following resources:
+## Demo script
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **RAG:** "What is your cancellation policy and baggage allowance?" Only the Research Agent runs. Point out the query embedding, the similarity scores and the `[source]` citations.
+2. **MCP:** "Find me flights and hotels from Chennai to Tokyo for 4 nights". Open the MCP panel and walk through `initialize` → `tools/list` → `tools/call`.
+3. **Full orchestration:** "Book a trip from Mumbai to Paris for 2 guests, 5 nights". All agents run, and `create_booking` returns a `SKY…` reference.
+4. **Memory:** follow up with "Actually make it 3 nights and book it". The supervisor reuses details from earlier turns.

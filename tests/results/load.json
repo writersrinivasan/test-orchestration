@@ -1,0 +1,52 @@
+[
+  {
+    "concurrency": 1,
+    "success": "1/1",
+    "wallMs": 3747,
+    "p50Ms": 3747,
+    "p95Ms": 3747,
+    "throughputPerMin": 16,
+    "eventsPerRun": 69,
+    "rssDeltaMB": 11
+  },
+  {
+    "concurrency": 10,
+    "success": "10/10",
+    "wallMs": 3708,
+    "p50Ms": 3690,
+    "p95Ms": 3693,
+    "throughputPerMin": 162,
+    "eventsPerRun": 69,
+    "rssDeltaMB": 12
+  },
+  {
+    "concurrency": 25,
+    "success": "25/25",
+    "wallMs": 3728,
+    "p50Ms": 3701,
+    "p95Ms": 3711,
+    "throughputPerMin": 402,
+    "eventsPerRun": 69,
+    "rssDeltaMB": 15
+  },
+  {
+    "concurrency": 50,
+    "success": "50/50",
+    "wallMs": 3797,
+    "p50Ms": 3739,
+    "p95Ms": 3767,
+    "throughputPerMin": 790,
+    "eventsPerRun": 69,
+    "rssDeltaMB": 38
+  },
+  {
+    "concurrency": 100,
+    "success": "100/100",
+    "wallMs": 3941,
+    "p50Ms": 3823,
+    "p95Ms": 3875,
+    "throughputPerMin": 1523,
+    "eventsPerRun": 69,
+    "rssDeltaMB": 51
+  }
+]

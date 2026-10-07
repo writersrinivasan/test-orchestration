@@ -1,0 +1,98 @@
+{
+  "results": [
+    {
+      "check": "Page title",
+      "pass": true
+    },
+    {
+      "check": "4 suggestion prompts shown",
+      "pass": true
+    },
+    {
+      "check": "9 workflow nodes rendered",
+      "pass": true
+    },
+    {
+      "check": "11 workflow edges rendered",
+      "pass": true
+    },
+    {
+      "check": "MCP / RAG / Agent panels present",
+      "pass": true
+    },
+    {
+      "check": "Live 'working' highlight appears during run",
+      "pass": true,
+      "detail": "first highlight after 168 ms"
+    },
+    {
+      "check": "All visited nodes turn green (done)",
+      "pass": true,
+      "detail": "9/9 green"
+    },
+    {
+      "check": "Booking card shows SKY reference",
+      "pass": true,
+      "detail": "SKY6EROPX"
+    },
+    {
+      "check": "Flight cards shown",
+      "pass": true
+    },
+    {
+      "check": "Hotel cards shown",
+      "pass": true
+    },
+    {
+      "check": "MCP panel lists 4 discovered tools",
+      "pass": true,
+      "detail": "4 chips"
+    },
+    {
+      "check": "MCP panel shows JSON-RPC wire messages",
+      "pass": true,
+      "detail": "13 messages"
+    },
+    {
+      "check": "RAG panel shows retrieved chunks with scores",
+      "pass": true,
+      "detail": "3 chunks"
+    },
+    {
+      "check": "Agent message timeline populated",
+      "pass": true,
+      "detail": "24 entries"
+    },
+    {
+      "check": "Supervisor plan overlay shown",
+      "pass": true
+    },
+    {
+      "check": "Wire message expands to JSON payload",
+      "pass": true
+    },
+    {
+      "check": "XSS payload rendered inert",
+      "pass": true
+    },
+    {
+      "check": "No browser console errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Mobile (390px): chat, graph, MCP, RAG, timeline all within viewport",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "metrics": {
+    "pageLoad": {
+      "ttfb": 185,
+      "domContentLoaded": 298,
+      "load": 709,
+      "fcp": 588
+    },
+    "uiRunMs": 9764
+  }
+}

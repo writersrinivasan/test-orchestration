@@ -1,0 +1,309 @@
+Dataset: skyway-travel-scenarios-v1 → https://smith.langchain.com/o/2e4e90b9-9b2d-4a30-ac4a-6180b04e6b94/datasets/05bfbf9c-23cc-4ac1-8550-77a6a40e69ec
+Starting evaluation of experiment: skyway-gpt-oss-120b-f333208e
+View results at https://smith.langchain.com/o/2e4e90b9-9b2d-4a30-ac4a-6180b04e6b94/datasets/05bfbf9c-23cc-4ac1-8550-77a6a40e69ec/compare?selectedSessions=7d3988a7-5aa1-4e3c-a791-b7c0476d2768
+Error running target function: RateLimitQuotaExhaustedError: 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01j6vq8psves2rgpfsbyte8bcc` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7123, Requested 927. Please try again in 375ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+    at APIError.generate (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/core/error.ts:84:14)
+    at Groq.makeStatusError (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/client.ts:286:28)
+    at Groq.makeRequest (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/client.ts:506:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.pRetry (/Users/apple/Documents/Test1/travel-agents/node_modules/@langchain/core/src/utils/p-retry/index.js:246:22)
+    at async run (/Users/apple/Documents/Test1/travel-agents/node_modules/p-queue/dist/index.js:163:29)
+llmJSON failed RateLimitError [RateLimitQuotaExhaustedError]: 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01j6vq8psves2rgpfsbyte8bcc` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7319, Requested 778. Please try again in 727.5ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+    at APIError.generate (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/core/error.ts:84:14)
+    at Groq.makeStatusError (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/client.ts:286:28)
+    at Groq.makeRequest (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/client.ts:506:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.pRetry (/Users/apple/Documents/Test1/travel-agents/node_modules/@langchain/core/src/utils/p-retry/index.js:246:22)
+    at async run (/Users/apple/Documents/Test1/travel-agents/node_modules/p-queue/dist/index.js:163:29) {
+  status: 429,
+  headers: Headers {
+    date: 'Wed, 07 Oct 2026 07:03:45 GMT',
+    'content-type': 'application/json',
+    'content-length': '378',
+    connection: 'keep-alive',
+    'cache-control': 'private, max-age=0, no-store, no-cache, must-revalidate',
+    'retry-after': '1',
+    server: 'cloudflare',
+    vary: 'Origin',
+    'x-groq-region': 'bom',
+    'x-ratelimit-limit-requests': '1000',
+    'x-ratelimit-limit-tokens': '8000',
+    'x-ratelimit-remaining-requests': '747',
+    'x-ratelimit-remaining-tokens': '681',
+    'x-ratelimit-reset-requests': '6h4m19.2s',
+    'x-ratelimit-reset-tokens': '54.892s',
+    'x-request-id': 'req_01m4ajsr6fe89vey8txrt01ceh',
+    via: '1.1 google',
+    'cf-cache-status': 'DYNAMIC',
+    'set-cookie': '__cf_bm=FQ7GJuFLV4vYFrm48lcOQUMNDmtRdIS3H02sMhUjV8E-1791356625.0576882-1.0.1.1-I4fXtYAeBDouRVG9jXGS0NfgzLtd778ZGECYf75tiXMweQ8K6aJeApzDsAgERUyiBigGexP2D8hIy11O1dMsr3Z1dKSq.nMZ9Xuec0zaqWcsRutTEdVJ5l0xD1927Rzs; HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Wed, 07 Oct 2026 07:33:45 GMT',
+    'strict-transport-security': 'max-age=15552000',
+    'cf-ray': 'a46b0c3a9f6e99d8-MAA',
+    'alt-svc': 'h3=":443"; ma=86400'
+  },
+  error: {
+    error: {
+      message: 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01j6vq8psves2rgpfsbyte8bcc` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7319, Requested 778. Please try again in 727.5ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing',
+      type: 'tokens',
+      code: 'rate_limit_exceeded'
+    }
+  },
+  rateLimitType: 'stop',
+  rateLimitReason: 'quota_message'
+}
+Error running target function: RateLimitQuotaExhaustedError: 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01j6vq8psves2rgpfsbyte8bcc` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6924, Requested 1289. Please try again in 1.5975s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+    at APIError.generate (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/core/error.ts:84:14)
+    at Groq.makeStatusError (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/client.ts:286:28)
+    at Groq.makeRequest (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/client.ts:506:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.pRetry (/Users/apple/Documents/Test1/travel-agents/node_modules/@langchain/core/src/utils/p-retry/index.js:246:22)
+    at async run (/Users/apple/Documents/Test1/travel-agents/node_modules/p-queue/dist/index.js:163:29)
+llmJSON failed RateLimitError [RateLimitQuotaExhaustedError]: 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01j6vq8psves2rgpfsbyte8bcc` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7221, Requested 782. Please try again in 22.5ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+    at APIError.generate (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/core/error.ts:84:14)
+    at Groq.makeStatusError (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/client.ts:286:28)
+    at Groq.makeRequest (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/client.ts:506:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.pRetry (/Users/apple/Documents/Test1/travel-agents/node_modules/@langchain/core/src/utils/p-retry/index.js:246:22)
+    at async run (/Users/apple/Documents/Test1/travel-agents/node_modules/p-queue/dist/index.js:163:29) {
+  status: 429,
+  headers: Headers {
+    date: 'Wed, 07 Oct 2026 07:03:57 GMT',
+    'content-type': 'application/json',
+    'content-length': '377',
+    connection: 'keep-alive',
+    'cache-control': 'private, max-age=0, no-store, no-cache, must-revalidate',
+    'retry-after': '1',
+    server: 'cloudflare',
+    vary: 'Origin',
+    'x-groq-region': 'bom',
+    'x-ratelimit-limit-requests': '1000',
+    'x-ratelimit-limit-tokens': '8000',
+    'x-ratelimit-remaining-requests': '743',
+    'x-ratelimit-remaining-tokens': '779',
+    'x-ratelimit-reset-requests': '6h10m4.8s',
+    'x-ratelimit-reset-tokens': '54.157s',
+    'x-request-id': 'req_01m4ajt3y9e008bprk9eaya1m8',
+    via: '1.1 google',
+    'cf-cache-status': 'DYNAMIC',
+    'set-cookie': '__cf_bm=zwCnaD2VS_YV7i35tAOeKUPP1X9.PWFpw5TXHD0Qfj4-1791356637.0818467-1.0.1.1-0Fpk3Dl7ZKn16ksOGIhVpWTIfsFmcCUy1kmujpjVIxGxf3YjF616AT8NdspIiMCSCej37NDBc1hUZ2g0lnjr8WVrFVatlbOxl83i4_MBVban1.MHs1EoXcJhrThoBdYk; HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Wed, 07 Oct 2026 07:33:57 GMT',
+    'strict-transport-security': 'max-age=15552000',
+    'cf-ray': 'a46b0c85cdc199d8-MAA',
+    'alt-svc': 'h3=":443"; ma=86400'
+  },
+  error: {
+    error: {
+      message: 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01j6vq8psves2rgpfsbyte8bcc` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7221, Requested 782. Please try again in 22.5ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing',
+      type: 'tokens',
+      code: 'rate_limit_exceeded'
+    }
+  },
+  rateLimitType: 'stop',
+  rateLimitReason: 'quota_message'
+}
+llmJSON failed RateLimitError [RateLimitQuotaExhaustedError]: 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01j6vq8psves2rgpfsbyte8bcc` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7635, Requested 764. Please try again in 2.9925s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+    at APIError.generate (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/core/error.ts:84:14)
+    at Groq.makeStatusError (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/client.ts:286:28)
+    at Groq.makeRequest (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/client.ts:506:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.pRetry (/Users/apple/Documents/Test1/travel-agents/node_modules/@langchain/core/src/utils/p-retry/index.js:246:22)
+    at async run (/Users/apple/Documents/Test1/travel-agents/node_modules/p-queue/dist/index.js:163:29) {
+  status: 429,
+  headers: Headers {
+    date: 'Wed, 07 Oct 2026 07:04:00 GMT',
+    'content-type': 'application/json',
+    'content-length': '378',
+    connection: 'keep-alive',
+    'cache-control': 'private, max-age=0, no-store, no-cache, must-revalidate',
+    'retry-after': '3',
+    server: 'cloudflare',
+    vary: 'Origin',
+    'x-groq-region': 'bom',
+    'x-ratelimit-limit-requests': '1000',
+    'x-ratelimit-limit-tokens': '8000',
+    'x-ratelimit-remaining-requests': '742',
+    'x-ratelimit-remaining-tokens': '365',
+    'x-ratelimit-reset-requests': '6h11m31.2s',
+    'x-ratelimit-reset-tokens': '57.262s',
+    'x-request-id': 'req_01m4ajt76ee1a9a611cxzh3s45',
+    via: '1.1 google',
+    'cf-cache-status': 'DYNAMIC',
+    'set-cookie': '__cf_bm=StWuPbZVygUe0yj.ntuK7R7_YD2wX5pUAfVEwkpsFrA-1791356640.4221618-1.0.1.1-t2t3suk9ucoiytReK1x1NtJEqnJ1pz1TT4qh2V01_t215jkB6jJedksiwWrN8hgZ9kYT1XsRfp7NlUjwZBbeEwefBIpV2U7FgMzjz2jPL7arU5g45UJkNreNZS7HgsyR; HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Wed, 07 Oct 2026 07:34:00 GMT',
+    'strict-transport-security': 'max-age=15552000',
+    'cf-ray': 'a46b0c9aada799d8-MAA',
+    'alt-svc': 'h3=":443"; ma=86400'
+  },
+  error: {
+    error: {
+      message: 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01j6vq8psves2rgpfsbyte8bcc` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7635, Requested 764. Please try again in 2.9925s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing',
+      type: 'tokens',
+      code: 'rate_limit_exceeded'
+    }
+  },
+  rateLimitType: 'stop',
+  rateLimitReason: 'quota_message'
+}
+Error running target function: RateLimitQuotaExhaustedError: 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01j6vq8psves2rgpfsbyte8bcc` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7459, Requested 851. Please try again in 2.325s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+    at APIError.generate (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/core/error.ts:84:14)
+    at Groq.makeStatusError (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/client.ts:286:28)
+    at Groq.makeRequest (/Users/apple/Documents/Test1/travel-agents/node_modules/groq-sdk/src/client.ts:506:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Object.pRetry (/Users/apple/Documents/Test1/travel-agents/node_modules/@langchain/core/src/utils/p-retry/index.js:246:22)
+    at async run (/Users/apple/Documents/Test1/travel-agents/node_modules/p-queue/dist/index.js:163:29)
+Error running evaluator evaluateRun on run 01a1152c-b8ff-7000-8000-02ac8bbf5351: TypeError: Cannot read properties of undefined (reading 'answer')
+    at rules (/Users/apple/Documents/Test1/travel-agents/tests/langsmith-eval.mts:89:26)
+    at file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/evaluator.js:16:20
+    at runWithContext (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/traceable.js:783:31)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_context_frame:63:14)
+    at traceableFunc (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/traceable.js:901:38)
+    at DynamicRunEvaluator.evaluateRun (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/evaluator.js:86:30)
+    at _ExperimentManager._runEvaluators (/Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/_runner.js:549:62)
+    at <anonymous> (/Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/_runner.js:587:107)
+    at <anonymous> (/Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/_runner.js:1114:24)
+    at run (/Users/apple/Documents/Test1/travel-agents/node_modules/p-queue/dist/index.js:157:104)
+Error running evaluator evaluateRun on run 01a1152c-b8ff-7000-8000-02ac8bbf5351: TypeError: Cannot read properties of undefined (reading 'context')
+    at groundedness (/Users/apple/Documents/Test1/travel-agents/tests/langsmith-eval.mts:124:5)
+    at file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/evaluator.js:16:20
+    at runWithContext (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/traceable.js:783:31)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_context_frame:63:14)
+    at traceableFunc (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/traceable.js:901:38)
+    at DynamicRunEvaluator.evaluateRun (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/evaluator.js:86:30)
+    at _ExperimentManager._runEvaluators (/Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/_runner.js:549:62)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async run (/Users/apple/Documents/Test1/travel-agents/node_modules/p-queue/dist/index.js:163:29)
+Error running evaluator evaluateRun on run 01a1152c-deea-7000-8000-01ab303522a3: TypeError: Cannot read properties of undefined (reading 'answer')
+    at rules (/Users/apple/Documents/Test1/travel-agents/tests/langsmith-eval.mts:89:26)
+    at file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/evaluator.js:16:20
+    at runWithContext (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/traceable.js:783:31)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_context_frame:63:14)
+    at traceableFunc (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/traceable.js:901:38)
+    at DynamicRunEvaluator.evaluateRun (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/evaluator.js:86:30)
+    at _ExperimentManager._runEvaluators (/Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/_runner.js:549:62)
+    at <anonymous> (/Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/_runner.js:587:107)
+    at <anonymous> (/Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/_runner.js:1114:24)
+    at run (/Users/apple/Documents/Test1/travel-agents/node_modules/p-queue/dist/index.js:157:104)
+Error running evaluator evaluateRun on run 01a1152c-deea-7000-8000-01ab303522a3: TypeError: Cannot read properties of undefined (reading 'context')
+    at groundedness (/Users/apple/Documents/Test1/travel-agents/tests/langsmith-eval.mts:124:5)
+    at file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/evaluator.js:16:20
+    at runWithContext (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/traceable.js:783:31)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_context_frame:63:14)
+    at traceableFunc (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/traceable.js:901:38)
+    at DynamicRunEvaluator.evaluateRun (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/evaluator.js:86:30)
+    at _ExperimentManager._runEvaluators (/Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/_runner.js:549:62)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async run (/Users/apple/Documents/Test1/travel-agents/node_modules/p-queue/dist/index.js:163:29)
+Error running evaluator evaluateRun on run 01a1152d-1b87-7000-8000-02ce195bc330: TypeError: Cannot read properties of undefined (reading 'answer')
+    at rules (/Users/apple/Documents/Test1/travel-agents/tests/langsmith-eval.mts:89:26)
+    at file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/evaluator.js:16:20
+    at runWithContext (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/traceable.js:783:31)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_context_frame:63:14)
+    at traceableFunc (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/traceable.js:901:38)
+    at DynamicRunEvaluator.evaluateRun (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/evaluator.js:86:30)
+    at _ExperimentManager._runEvaluators (/Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/_runner.js:549:62)
+    at <anonymous> (/Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/_runner.js:587:107)
+    at <anonymous> (/Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/_runner.js:1114:24)
+    at run (/Users/apple/Documents/Test1/travel-agents/node_modules/p-queue/dist/index.js:157:104)
+Error running evaluator evaluateRun on run 01a1152d-1b87-7000-8000-02ce195bc330: TypeError: Cannot read properties of undefined (reading 'context')
+    at groundedness (/Users/apple/Documents/Test1/travel-agents/tests/langsmith-eval.mts:124:5)
+    at file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/evaluator.js:16:20
+    at runWithContext (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/traceable.js:783:31)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_context_frame:63:14)
+    at traceableFunc (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/traceable.js:901:38)
+    at DynamicRunEvaluator.evaluateRun (file:///Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/evaluator.js:86:30)
+    at _ExperimentManager._runEvaluators (/Users/apple/Documents/Test1/travel-agents/node_modules/langsmith/dist/evaluation/_runner.js:549:62)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async run (/Users/apple/Documents/Test1/travel-agents/node_modules/p-queue/dist/index.js:163:29)
+{
+  "experiment": "skyway-gpt-oss-120b-f333208e",
+  "experimentUrl": "https://smith.langchain.com/o/2e4e90b9-9b2d-4a30-ac4a-6180b04e6b94/projects/p/7d3988a7-5aa1-4e3c-a791-b7c0476d2768",
+  "dataset": "skyway-travel-scenarios-v1",
+  "examples": 20,
+  "passed": 19,
+  "metrics": {
+    "routing": {
+      "mean": 1,
+      "n": 17
+    },
+    "param_extraction": {
+      "mean": 1,
+      "n": 8
+    },
+    "no_unwanted_booking": {
+      "mean": 1,
+      "n": 9
+    },
+    "planner_llm_used": {
+      "mean": 0.941,
+      "n": 17
+    },
+    "groundedness": {
+      "mean": 0.941,
+      "n": 17
+    },
+    "booking_created": {
+      "mean": 1,
+      "n": 3
+    },
+    "booking_math": {
+      "mean": 1,
+      "n": 3
+    },
+    "citation": {
+      "mean": 1,
+      "n": 6
+    },
+    "answer_content": {
+      "mean": 1,
+      "n": 7
+    },
+    "answer_safe": {
+      "mean": 1,
+      "n": 2
+    },
+    "routing_exact": {
+      "mean": 1,
+      "n": 6
+    }
+  },
+  "byCategory": {
+    "MCP search": {
+      "pass": 4,
+      "n": 4
+    },
+    "Full orchestration": {
+      "pass": 1,
+      "n": 2
+    },
+    "Booking safety": {
+      "pass": 2,
+      "n": 2
+    },
+    "Prompt injection": {
+      "pass": 2,
+      "n": 2
+    },
+    "RAG": {
+      "pass": 5,
+      "n": 5
+    },
+    "Edge cases": {
+      "pass": 3,
+      "n": 3
+    },
+    "Multi-turn memory": {
+      "pass": 2,
+      "n": 2
+    }
+  },
+  "latencyMs": {
+    "p50": 4093,
+    "p95": 7304
+  },
+  "failures": [
+    {
+      "id": "O2",
+      "failed": [
+        "groundedness"
+      ],
+      "comment": "The assistant added that all visas are free for eligible travelers, a claim not supported by the provided context."
+    }
+  ]
+}
